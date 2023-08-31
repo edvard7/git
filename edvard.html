@@ -4,8 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://use.fontawesome.com/2cbab40137.js"></script>
     <title>Document</title>
+    <style>
+      .container-todo {
+        background: silver;
+        padding: 20px 20px;
+      }
+      .todo {
+        list-style-type: none;
+        list-style-position: inside;
+      }
+      .todo li {
+        padding: 5px 10px;
+        color: white;
+      }
+      .todo li:nth-child(odd) {
+        background: rgba(0, 0, 144, 0.5);
+      }
+      .todo li:nth-child(even) {
+        background: rgba(0, 0, 144, 0.7);
+      }
+      .todo li.complete {
+        text-decoration: line-through;
+        background: rgba(0, 0, 144, 0.2);
+      }
+      .exit {
+        color: red;
+        background: none;
+        border: 1px solid black;
+      }
+      .todo button {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+      .todo button:hover {
+        font-weight: bold;
+      }
+      .todo li.complete::before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+
+        background-repeat: no-repeat;
+        margin-right: 6px;
+      }
+
+      .todo li::before {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background-image: url("square.svg");
+        background-repeat: no-repeat;
+        margin-right: 6px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="container-todo">
+      <h1>My todo list</h1>
+      <ul class="todo">
+        <li>Купить молоко <button class="exit">х</button></li>
+        <li class="complete">Купить хлеб <button class="exit">х</button></li>
+        <li>Сделать ДЗ <button class="exit">х</button></li>
+        <li>Сделать ДЗ Математика <button class="exit">х</button></li>
+        <li>Сделать ДЗ Русский <button class="exit">х</button></li>
+        <li class="complete">Помыть посуду <button class="exit">х</button></li>
+        <li>Постирать вещи <button class="exit">х</button></li>
+      </ul>
+    </div>
+  </body>
 </html>
 ls
